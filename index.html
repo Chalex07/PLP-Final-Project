@@ -1,0 +1,210 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logistics Management</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Logistics Management Dashboard</h1>
+  <div id="analytics">
+    <h2>Analytics</h2>
+    <p>Total Vendors: <span id="totalVendors"></span></p>
+    <p>Total Delivery Agents: <span id="totalAgents"></span></p>
+    <p>Total Deliveries: <span id="totalDeliveries"></span></p>
+  </div>
+
+  <div id="data-entry">
+    <h2>Manage Vendors</h2>
+    <form id="vendorForm">
+      <input type="text" id="vendorName" placeholder="Vendor Name" required>
+      <input type="text" id="vendorContact" placeholder="Vendor Contact" required>
+      <button type="submit">Add Vendor</button>
+    </form>
+    <table id="vendorTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div id="manageCustomers">
+    <h2>Manage Customers</h2>
+    <form id="customerForm">
+      <input type="text" id="customerName" placeholder="Customer Name" required>
+      <input type="text" id="customerContact" placeholder="Customer Contact" required>
+      <button type="submit">Add Customer</button>
+    </form>
+    <table id="customerTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  
+  <div id="manageProducts">
+    <h2>Manage Products</h2>
+    <form id="productForm">
+      <input type="text" id="productName" placeholder="Product Name" required>
+      <input type="text" id="vendorId" placeholder="Vendor ID" required>
+      <button type="submit">Add Product</button>
+    </form>
+    <table id="productTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Vendor ID</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logistics Management System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Logistics Management System</h1>
+  </header>
+  
+  <main>
+    <!-- Vendors Section -->
+    <section id="manageVendors">
+      <h2>Manage Vendors</h2>
+      <form id="vendorForm">
+        <input type="text" id="vendorName" placeholder="Vendor Name" required>
+        <input type="text" id="vendorContact" placeholder="Vendor Contact" required>
+        <button type="submit">Add Vendor</button>
+      </form>
+      <table id="vendorTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- Delivery Agents Section -->
+    <section id="manageAgents">
+      <h2>Manage Delivery Agents</h2>
+      <form id="agentForm">
+        <input type="text" id="agentName" placeholder="Agent Name" required>
+        <input type="text" id="agentContact" placeholder="Agent Contact" required>
+        <button type="submit">Add Agent</button>
+      </form>
+      <table id="agentTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- Customers Section -->
+    <section id="manageCustomers">
+      <h2>Manage Customers</h2>
+      <form id="customerForm">
+        <input type="text" id="customerName" placeholder="Customer Name" required>
+        <input type="text" id="customerContact" placeholder="Customer Contact" required>
+        <button type="submit">Add Customer</button>
+      </form>
+      <table id="customerTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- Products Section -->
+    <section id="manageProducts">
+      <h2>Manage Products</h2>
+      <form id="productForm">
+        <input type="text" id="productName" placeholder="Product Name" required>
+        <input type="text" id="vendorId" placeholder="Vendor ID" required>
+        <button type="submit">Add Product</button>
+      </form>
+      <table id="productTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Vendor ID</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- Deliveries Section -->
+    <section id="manageDeliveries">
+      <h2>Manage Deliveries</h2>
+      <form id="deliveryForm">
+        <input type="text" id="productId" placeholder="Product ID" required>
+        <input type="text" id="agentId" placeholder="Agent ID" required>
+        <input type="text" id="customerId" placeholder="Customer ID" required>
+        <input type="date" id="deliveryDate" placeholder="Delivery Date" required>
+        <input type="text" id="deliveryLocation" placeholder="Delivery Location" required>
+        <button type="submit">Add Delivery</button>
+      </form>
+      <table id="deliveryTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Product ID</th>
+            <th>Agent ID</th>
+            <th>Customer ID</th>
+            <th>Date</th>
+            <th>Location</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
