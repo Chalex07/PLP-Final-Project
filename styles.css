@@ -1,108 +1,75 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-  }
-  
-  header {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-    margin-bottom: 1em;
-  }
-  
-  h1 {
-    margin: 0;
-  }
-  
-  main {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  section {
-    background-color: white;
-    border-radius: 5px;
-    padding: 1em;
-    margin-bottom: 2em;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  h2 {
-    color: #007bff;
-  }
-  
-  form {
-    margin-bottom: 1em;
-  }
-  
-  form input, form button {
-    padding: 0.5em;
-    margin: 0.5em 0;
-    font-size: 1em;
-  }
-  
-  form input {
-    width: calc(100% - 1.2em);
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  
-  form button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  form button:hover {
-    background-color: #0056b3;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1em;
-  }
-  
-  table th, table td {
-    padding: 0.5em;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  table th {
-    background-color: #f4f4f9;
-  }
-  
-  table tr:hover {
-    background-color: #f1f1f1;
-  }
-  
-  button {
-    padding: 0.4em 0.6em;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #218838;
-  }
-  
-  button.delete {
-    background-color: #dc3545;
-  }
-  
-  button.delete:hover {
-    background-color: #c82333;
-  }
-  
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+  border: 1px solid #dddddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+table th {
+  background-color: #0a3f0e;
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #a4db0a;
+}
+
+table tr:hover {
+  background-color: #e9ecef;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #343a40;
+  color: white;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0;
+} */ */
+/* Existing styles (same as before) */
+
+/* Add Data Section */
+section#addData {
+  margin-top: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input, form select, form button {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
